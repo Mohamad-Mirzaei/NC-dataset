@@ -381,13 +381,13 @@ param TechGroupWeight :=
 ;
 
 param MaxCapacityGroup := 
-2023         PumpedHydro_R3         0.095    
-2025         PumpedHydro_R3         0.095    
-2030         PumpedHydro_R3         0.095    
-2035         PumpedHydro_R3         0.095    
-2040         PumpedHydro_R3         0.095    
-2045         PumpedHydro_R3         0.095    
-2050         PumpedHydro_R3         0.095    
+2023         PumpedHydro_R3         5.0    
+2025         PumpedHydro_R3         5.0    
+2030         PumpedHydro_R3         5.0    
+2035         PumpedHydro_R3         5.0    
+2040         PumpedHydro_R3         5.0    
+2045         PumpedHydro_R3         5.0    
+2050         PumpedHydro_R3         5.0    
 2023         HydroGeneration_R3         2.058    
 2025         HydroGeneration_R3         2.058    
 2030         HydroGeneration_R3         2.058    
@@ -3151,6 +3151,10 @@ param MinCapacity :=
     R3         2040         NG_F-FRAME_CT_NEW         0.378    #     Added            
     R3         2045         NG_F-FRAME_CT_NEW         0.378    #     Added            
     R3         2050         NG_F-FRAME_CT_NEW         0.54    #     Added            
+    R3         2035         WAT_PS_NEW         1.8    #     Added            
+    R3         2040         WAT_PS_NEW         1.8    #     Added            
+    R3         2045         WAT_PS_NEW         1.8    #     Added            
+    R3         2050         WAT_PS_NEW         1.8    #     Added            
 ;
 
 param MaxCapacity := 
@@ -17591,7 +17595,7 @@ param Efficiency :=
     R3             WATER             WAT_HY_EXISTING         2000         ELC         1.0    
     R3             WATER             WAT_HY_EXISTING         2012         ELC         1.0    
     R3             WATER             WAT_HY_EXISTING         2013         ELC         1.0    
-    R3             ELC             WAT_PS_EXISTING         1956         ELC         0.8    
+    R3             ELC             WAT_PS_EXISTING         1936         ELC         0.8    
     R3             ELC             WAT_PS_EXISTING         1917         ELC         0.8    
     R3             BIOMASS             WDS_ST_EXISTING         1985         ELC         0.309    
     R3             BIOMASS             WDS_ST_EXISTING         1993         ELC         0.309    
@@ -17728,6 +17732,8 @@ param ExistingCapacity :=
     R3             WAT_HY_EXISTING         2000     0.0004    #     EIA 860 Generator + Code 2 aggregate            
     R3             WAT_HY_EXISTING         2012     0.0884    #     EIA 860 Generator + Code 2 aggregate            
     R3             WAT_HY_EXISTING         2013     0.028    #     EIA 860 Generator + Code 2 aggregate            
+    R3             WAT_PS_EXISTING         1917     1.52    #     Added            
+    R3             WAT_PS_EXISTING         1936     0.78    #     Added            
     R3             WDS_ST_EXISTING         1985     0.0075    #     EIA 860 Generator + Code 2 aggregate            
     R3             WDS_ST_EXISTING         1993     0.0009    #     EIA 860 Generator + Code 2 aggregate            
     R3-R1             TRANSMISSION_INTERREGIONAL         2022     1000.0    #     EIA 860 Generator + Code 2 aggregate            
@@ -23201,6 +23207,13 @@ param CostFixed :=
     R3         2040         WAT_HY_EXISTING         2013     74.24    #     ATB 2018- Low cost as most existing plants are in terms of Head and cfs Conservative            
     R3         2045         WAT_HY_EXISTING         2013     74.24    #     ATB 2018- Low cost as most existing plants are in terms of Head and cfs Conservative            
     R3         2050         WAT_HY_EXISTING         2013     74.24    #     ATB 2018- Low cost as most existing plants are in terms of Head and cfs Conservative            
+    R3         2023         WAT_PS_EXISTING         1917     20.671    #     NREL ATB 2022            
+    R3         2025         WAT_PS_EXISTING         1917     20.671    #     NREL ATB 2022            
+    R3         2023         WAT_PS_EXISTING         1936     20.671    #     NREL ATB 2022            
+    R3         2025         WAT_PS_EXISTING         1936     20.671    #     NREL ATB 2022            
+    R3         2030         WAT_PS_EXISTING         1936     20.671    #     NREL ATB 2022            
+    R3         2035         WAT_PS_EXISTING         1936     20.671    #     NREL ATB 2022            
+    R3         2040         WAT_PS_EXISTING         1936     20.671    #     NREL ATB 2022            
     R3         2023         WDS_ST_EXISTING         1985     174.986    #     NREL ATB 2022            
     R3         2025         WDS_ST_EXISTING         1985     174.986    #     NREL ATB 2022            
     R3         2030         WDS_ST_EXISTING         1985     174.986    #     NREL ATB 2022            
@@ -27842,6 +27855,13 @@ param CostVariable :=
     R3         2040         WAT_HY_EXISTING         2013     0.0    #     Hydropower Class 1             
     R3         2045         WAT_HY_EXISTING         2013     0.0    #     Hydropower Class 1             
     R3         2050         WAT_HY_EXISTING         2013     0.0    #     Hydropower Class 1             
+    R3         2023         WAT_PS_EXISTING         1917     0.165    #     Pumped Hydropower Class 1             
+    R3         2025         WAT_PS_EXISTING         1917     0.165    #     Pumped Hydropower Class 1             
+    R3         2023         WAT_PS_EXISTING         1936     0.165    #     Pumped Hydropower Class 1             
+    R3         2025         WAT_PS_EXISTING         1936     0.165    #     Pumped Hydropower Class 1             
+    R3         2030         WAT_PS_EXISTING         1936     0.165    #     Pumped Hydropower Class 1             
+    R3         2035         WAT_PS_EXISTING         1936     0.165    #     Pumped Hydropower Class 1             
+    R3         2040         WAT_PS_EXISTING         1936     0.165    #     Pumped Hydropower Class 1             
     R3         2023         WDS_ST_EXISTING         1985     1.869    #     Biopower             
     R3         2025         WDS_ST_EXISTING         1985     1.869    #     Biopower             
     R3         2030         WDS_ST_EXISTING         1985     1.869    #     Biopower             
@@ -31072,13 +31092,13 @@ param CapacityCredit :=
     R3         2040         WAT_PS_EXISTING         1917     0.942    
     R3         2045         WAT_PS_EXISTING         1917     0.942    
     R3         2050         WAT_PS_EXISTING         1917     0.942    
-    R3         2023         WAT_PS_EXISTING         1956     0.942    
-    R3         2025         WAT_PS_EXISTING         1956     0.942    
-    R3         2030         WAT_PS_EXISTING         1956     0.942    
-    R3         2035         WAT_PS_EXISTING         1956     0.942    
-    R3         2040         WAT_PS_EXISTING         1956     0.942    
-    R3         2045         WAT_PS_EXISTING         1956     0.942    
-    R3         2050         WAT_PS_EXISTING         1956     0.942    
+    R3         2023         WAT_PS_EXISTING         1936     0.942    
+    R3         2025         WAT_PS_EXISTING         1936     0.942    
+    R3         2030         WAT_PS_EXISTING         1936     0.942    
+    R3         2035         WAT_PS_EXISTING         1936     0.942    
+    R3         2040         WAT_PS_EXISTING         1936     0.942    
+    R3         2045         WAT_PS_EXISTING         1936     0.942    
+    R3         2050         WAT_PS_EXISTING         1936     0.942    
     R3         2023         WDS_ST_EXISTING         1985     0.91    
     R3         2025         WDS_ST_EXISTING         1985     0.91    
     R3         2030         WDS_ST_EXISTING         1985     0.91    
